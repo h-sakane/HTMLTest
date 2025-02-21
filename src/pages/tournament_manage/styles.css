@@ -1,0 +1,77 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+.filter-container {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.filter-option {
+  display: none;
+}
+.remove-filter {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.sort-icon {
+  margin-left: 5px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content label {
+  display: block;
+  padding: 8px;
+  cursor: pointer;
+}
+.dropdown-content label:hover {
+  background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+th.sortable {
+  transition: background-color 0.3s ease;
+}
+
+th.sortable:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+.collapsible {
+  display: none;
+}
+
+.collapsible-button {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: underline;
+}
+
+.publisher-image {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  vertical-align: middle;
+}

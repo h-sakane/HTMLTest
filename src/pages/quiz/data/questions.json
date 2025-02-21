@@ -1,0 +1,39 @@
+[
+    {
+        "question": "日本の首都はどこですか？",
+        "image": "images/tokyo.jpg",
+        "answers": [
+            { "text": "東京", "correct": true },
+            { "text": "大阪", "correct": false },
+            { "text": "京都", "correct": false },
+            { "text": "札幌", "correct": false }
+        ]
+    },
+    {
+        "question": "次のうち、最も高い山はどれですか？",
+        "answers": [
+            { "text": "エベレスト (ネパール)", "correct": true },
+            { "text": "キリマンジャロ (タンザニア)", "correct": false },
+            { "text": "マッキンリー (アメリカ)", "correct": false },
+            { "text": "富士山 (日本)", "correct": false }
+        ]
+    },
+    {
+        "question": "次のうち、最も長い川はどれですか？",
+        "answers": [
+            { "text": "ナイル川 (エジプト)", "correct": true },
+            { "text": "アマゾン川 (ブラジル)", "correct": false },
+            { "text": "ミシシッピ川 (アメリカ)", "correct": false },
+            { "text": "長江 (中国)", "correct": false }
+        ]
+    },
+    {
+        "question": "次のうち、最も広い砂漠はどれですか？",
+        "answers": [
+            { "text": "サハラ砂漠 (アフリカ)", "correct": true },
+            { "text": "ゴビ砂漠 (アジア)", "correct": false },
+            { "text": "カラハリ砂漠 (アフリカ)", "correct": false },
+            { "text": "アタカマ砂漠 (南アメリカ)", "correct": false }
+        ]
+    }
+]

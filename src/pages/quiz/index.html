@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズサイト</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>クイズ</h1>
+        <div id="question-container">
+            <p id="question-number"></p>
+            <p id="question"></p>
+            <img id="question-image" src="" alt="" class="hide">
+            <div id="progress-bar" class="hide">
+                <div id="progress"></div>
+            </div>
+            <form id="answer-form">
+                <div id="answer-buttons" class="btn-container"></div>
+            </form>
+            <p id="warning-message" class="hide" style="color: red;">選択肢を選んでください。</p>
+        </div>
+        <button id="submit-button" class="btn">次へ</button>
+        <div id="result-container" class="hide">
+            <h2>成績</h2>
+            <p id="score"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

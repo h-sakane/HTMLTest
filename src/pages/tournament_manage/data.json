@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "吾輩は猫である",
+    "author": "夏目漱石",
+    "year": "1905-01-01",
+    "genre": "小説",
+    "location": "東京",
+    "publisher": ["出版社A", "出版社B"],
+    "url": "https://example.com/book1"
+  },
+  {
+    "id": 2,
+    "title": "羅生門",
+    "author": "芥川龍之介",
+    "year": "1915-01-01",
+    "genre": "短編小説",
+    "location": "京都",
+    "publisher": ["出版社C"],
+    "url": "https://example.com/book2"
+  },
+  {
+    "id": 3,
+    "title": "雪国",
+    "author": "川端康成",
+    "year": "1947-01-01",
+    "genre": "小説",
+    "location": "新潟",
+    "publisher": ["出版社A"],
+    "url": "https://example.com/book3"
+  },
+  {
+    "id": 4,
+    "title": "こころ",
+    "author": "夏目漱石",
+    "year": "1914-01-01",
+    "genre": "小説",
+    "location": "東京",
+    "publisher": ["出版社B"],
+    "url": "https://example.com/book4"
+  },
+  {
+    "id": 5,
+    "title": "銀河鉄道の夜",
+    "author": "宮沢賢治",
+    "year": "1934-01-01",
+    "genre": "ファンタジー",
+    "location": "岩手",
+    "publisher": ["出版社C", "出版社D"],
+    "url": "https://example.com/book5"
+  }
+]

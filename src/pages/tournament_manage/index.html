@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>図書館蔵書システム</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>図書館蔵書システム</h1>
+  <button id="add-filter">＋ フィルタ/検索を追加</button>
+  <span id="result-count">合計: 0 件</span>
+  <div id="filters"></div>
+  <button id="toggle-button" class="collapsible-button">詳細を表示</button>
+  <table id="book-table">
+    <thead>
+      <tr>
+        <th data-column="year" data-order="desc" onclick="sortTable('year')" class="sortable">出版年</th>
+        <th data-column="title" data-order="none" onclick="sortTable('title')" class="sortable">タイトル</th>
+        <th data-column="author" data-order="none" onclick="sortTable('author')" class="sortable">著者</th>
+        <th data-column="genre" data-order="none" onclick="sortTable('genre')" class="sortable">ジャンル</th>
+        <th data-column="location" data-order="none" class="collapsible sortable" onclick="toggleColumns()">所在地</th>
+        <th data-column="publisher" data-order="none" class="collapsible sortable" onclick="toggleColumns()">出版社</th>
+        <th data-column="url" data-order="none" class="collapsible sortable" onclick="toggleColumns()">商品ページ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- データがここに表示されます -->
+    </tbody>
+  </table>
+  <script src="scripts.js"></script>
+</body>
+</html>
