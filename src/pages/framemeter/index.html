@@ -8,22 +8,31 @@
 </head>
 <body>
     <div id="image-container">
-        <img id="image" src="images/image1.png" alt="Image Sequence">
-        <div id="counter">1/3</div>
+        <img id="image" src="images/image (17).png" alt="Image Sequence">
+        <div id="info-container">
+            <div id="counter">1/3</div>
+            <button id="help-button">?</button>
+            <div id="help" class="tooltip">
+                このスライダーは画像を順番に表示します。<br>
+                再生、停止、前後の画像に移動することができます。
+            </div>
+        </div>
         <div id="controls">
             <button id="prev">&lt;</button>
             <button id="pause">▮▮</button>
             <button id="play">▷</button>
             <button id="next">&gt;</button>
             <select id="speed">
-                <option value="6">10%</option>
-                <option value="15">25%</option>
-                <option value="30">50%</option>
-                <option value="60" selected>100%</option>
+            <option value="6">10%</option>
+            <option value="15">25%</option>
+            <option value="30">50%</option>
+            <option value="60" selected>100%</option>
             </select>
         </div>
-        <div id="markers"></div>
-        <div id="indicator"></div>
-       <script src="script.js"></script>
+        <div id="timeline-container">
+            <div id="markers"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
