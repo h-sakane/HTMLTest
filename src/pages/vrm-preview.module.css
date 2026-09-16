@@ -1,0 +1,148 @@
+.page {
+  --ink: #25231f;
+  --muted: #716b60;
+  --line: rgba(37, 35, 31, 0.15);
+  padding: 48px 0 32px;
+}
+
+.heading {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.eyebrow,
+.fileLabel {
+  color: #a14c35;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.heading h1 {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.98;
+  margin: 0;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 0;
+}
+
+.previewShell {
+  border: 1px solid var(--line);
+  background: #f5f0e7;
+  box-shadow: 12px 12px 0 #d9cdbb;
+}
+
+.previewHeader,
+.controls {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.previewHeader {
+  border-bottom: 1px solid var(--line);
+}
+
+.previewHeader strong {
+  color: var(--ink);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.signal {
+  border: 1px solid #c9bfae;
+  color: #8e8477;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 5px 8px;
+}
+
+.signalReady {
+  border-color: #86a184;
+  color: #427047;
+}
+
+.stage {
+  height: min(68vh, 680px);
+  min-height: 420px;
+  position: relative;
+}
+
+.stage canvas {
+  display: block;
+  height: 100%;
+  touch-action: none;
+  width: 100%;
+}
+
+.status {
+  bottom: 16px;
+  color: #615a50;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  left: 20px;
+  max-width: calc(100% - 40px);
+  pointer-events: none;
+  position: absolute;
+}
+
+.controls {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.controls button {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  padding: 8px 12px;
+}
+
+.controls button:hover,
+.controls button:focus-visible {
+  background: var(--ink);
+  color: #f5f0e7;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 28px 0 0;
+}
+
+.note code {
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding-top: 24px;
+  }
+
+  .previewShell {
+    box-shadow: 7px 7px 0 #d9cdbb;
+  }
+
+  .stage {
+    height: 62vh;
+    min-height: 360px;
+  }
+}
