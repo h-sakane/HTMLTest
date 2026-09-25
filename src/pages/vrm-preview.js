@@ -9,10 +9,14 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "./vrm-preview.module.css"
 
-const MODEL_PATH = "/vrm/faia_beta.vrm"
+const MODEL_OPTIONS = [
+  { fileName: "faia_alpha.vrm", path: "/vrm/faia_alpha.vrm" },
+  { fileName: "faia_beta.vrm", path: "/vrm/faia_beta.vrm" },
+]
 
 const VrmPreviewPage = () => {
   const canvasRef = useRef(null)
+  const [selectedModel, setSelectedModel] = useState(MODEL_OPTIONS[1])
   const [status, setStatus] = useState("モデルを確認しています…")
   const [isReady, setIsReady] = useState(false)
 
@@ -75,8 +79,11 @@ const VrmPreviewPage = () => {
 
     const loader = new GLTFLoader()
     loader.register(parser => new VRMLoaderPlugin(parser))
+    setStatus(`${selectedModel.fileName} を読み込んでいます…`)
+    setIsReady(false)
+
     loader.load(
-      MODEL_PATH,
+      selectedModel.path,
       gltf => {
         currentVrm = gltf.userData.vrm
         if (!currentVrm) {
@@ -92,7 +99,7 @@ const VrmPreviewPage = () => {
       },
       undefined,
       () => {
-        setStatus("モデル未配置: static/vrm/faia_beta.vrm にファイルを置いてください。")
+        setStatus(`モデル未配置: static/vrm/${selectedModel.fileName} にファイルを置いてください。`)
       }
     )
 
@@ -119,7 +126,7 @@ const VrmPreviewPage = () => {
         }
       })
     }
-  }, [])
+  }, [selectedModel])
 
   const resetView = () => window.location.reload()
 
@@ -136,8 +143,26 @@ const VrmPreviewPage = () => {
           <div className={styles.previewHeader}>
             <div>
               <span className={styles.fileLabel}>CURRENT ASSET</span>
-              <strong>faia_beta.vrm</strong>
+              <strong>{selectedModel.fileName}</strong>
             </div>
+            <label className={styles.modelPicker}>
+              <span className={styles.visuallyHidden}>表示するモデル</span>
+              <select
+                value={selectedModel.fileName}
+                onChange={event => {
+                  const nextModel = MODEL_OPTIONS.find(
+                    model => model.fileName === event.target.value
+                  )
+                  if (nextModel) setSelectedModel(nextModel)
+                }}
+              >
+                {MODEL_OPTIONS.map(model => (
+                  <option key={model.fileName} value={model.fileName}>
+                    {model.fileName}
+                  </option>
+                ))}
+              </select>
+            </label>
             <span className={`${styles.signal} ${isReady ? styles.signalReady : ""}`}>
               {isReady ? "READY" : "WAITING"}
             </span>
@@ -155,7 +180,7 @@ const VrmPreviewPage = () => {
         </section>
 
         <p className={styles.note}>
-          モデルの配置先: <code>static/vrm/faia_beta.vrm</code>
+          モデルの配置先: <code>static/vrm/{selectedModel.fileName}</code>
         </p>
       </div>
     </Layout>

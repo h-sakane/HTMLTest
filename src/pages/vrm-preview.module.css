@@ -63,6 +63,28 @@
   margin-top: 4px;
 }
 
+.modelPicker select {
+  background: #f5f0e7;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font: 11px var(--font-mono);
+  padding: 8px 28px 8px 10px;
+}
+
+.modelPicker select:focus-visible {
+  outline: 2px solid #a14c35;
+  outline-offset: 2px;
+}
+
+.visuallyHidden {
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  clip: rect(0, 0, 0, 0);
+}
+
 .signal {
   border: 1px solid #c9bfae;
   color: #8e8477;
@@ -144,5 +166,20 @@
   .stage {
     height: 62vh;
     min-height: 360px;
+  }
+
+  .previewHeader {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .modelPicker {
+    order: 3;
+    width: 100%;
+  }
+
+  .modelPicker select {
+    width: 100%;
   }
 }
