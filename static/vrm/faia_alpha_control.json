@@ -1,9 +1,9 @@
 {
   "purpose": "Morph-data VRM control specification. NOT automatically executed in VRM players.",
-  "file": "astra_16_anime_v001.vrm",
-  "source_rig": "RIG_ASTRA_ANIME_LOOK",
-  "coat": "ANI_CLOTH_COAT_BODY",
-  "angles": "Source bone local matrix_basis Euler XYZ, radians. Convert normalized importer axes from source bind matrices.",
+  "file": "astra_17_realistic_v001.vrm",
+  "source_rig": "RIG_ASTRA_17_REALISTIC",
+  "coat": "R17_CLOTH_COAT_BODY",
+  "angles": "Respect each variable rotation_mode. 16 elbow/natural-arm variables now use Blender SWING_TWIST_Y ROT_X; others retain source local XYZ radians. Do not substitute geometric bend or Unity Euler angles.",
   "shape_drivers": [
     {
       "data_path": "key_blocks[\"CORR_Elbow_L_30\"].value",
@@ -15,7 +15,7 @@
           "bone": "LowerArm_L",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -30,7 +30,7 @@
           "bone": "LowerArm_L",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -45,7 +45,7 @@
           "bone": "LowerArm_L",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -60,7 +60,7 @@
           "bone": "LowerArm_L",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -75,7 +75,7 @@
           "bone": "LowerArm_L",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -90,7 +90,7 @@
           "bone": "LowerArm_L",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -105,7 +105,7 @@
           "bone": "LowerArm_L",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -120,7 +120,7 @@
           "bone": "LowerArm_R",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -135,7 +135,7 @@
           "bone": "LowerArm_R",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -150,7 +150,7 @@
           "bone": "LowerArm_R",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -165,7 +165,7 @@
           "bone": "LowerArm_R",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -180,7 +180,7 @@
           "bone": "LowerArm_R",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -195,7 +195,7 @@
           "bone": "LowerArm_R",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -210,7 +210,7 @@
           "bone": "LowerArm_R",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -492,7 +492,7 @@
           "bone": "LowerArm_L",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -507,7 +507,7 @@
           "bone": "LowerArm_R",
           "transform_type": "ROT_X",
           "transform_space": "LOCAL_SPACE",
-          "rotation_mode": "XYZ",
+          "rotation_mode": "SWING_TWIST_Y",
           "data_path": ""
         }
       ]
@@ -571,6 +571,366 @@
           "name": "r2",
           "type": "TRANSFORMS",
           "bone": "UpperArm_R",
+          "transform_type": "ROT_Z",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        }
+      ]
+    },
+    {
+      "data_path": "key_blocks[\"CORR_TwistForearmPositive_L\"].value",
+      "expression": "max(0,1-((r0-(-0.60131))**2+(r1-(-0.51247))**2+(r2-(0.98785))**2+(r3-(-1.76315))**2+(r4-(-0.32108))**2+(r5-(-0.83724))**2)/0.422500)**2",
+      "variables": [
+        {
+          "name": "r0",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_L",
+          "transform_type": "ROT_X",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r1",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_L",
+          "transform_type": "ROT_Y",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r2",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_L",
+          "transform_type": "ROT_Z",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r3",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_L",
+          "transform_type": "ROT_X",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r4",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_L",
+          "transform_type": "ROT_Y",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r5",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_L",
+          "transform_type": "ROT_Z",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        }
+      ]
+    },
+    {
+      "data_path": "key_blocks[\"CORR_TwistForearmNegative_L\"].value",
+      "expression": "max(0,1-((r0-(-0.60131))**2+(r1-(-0.51247))**2+(r2-(0.98785))**2+(r3-(-1.89749))**2+(r4-(0.18241))**2+(r5-(0.67217))**2)/0.422500)**2",
+      "variables": [
+        {
+          "name": "r0",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_L",
+          "transform_type": "ROT_X",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r1",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_L",
+          "transform_type": "ROT_Y",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r2",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_L",
+          "transform_type": "ROT_Z",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r3",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_L",
+          "transform_type": "ROT_X",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r4",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_L",
+          "transform_type": "ROT_Y",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r5",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_L",
+          "transform_type": "ROT_Z",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        }
+      ]
+    },
+    {
+      "data_path": "key_blocks[\"CORR_TwistUpper_L\"].value",
+      "expression": "max(0,1-((r0-(-0.91772))**2+(r1-(-0.90104))**2+(r2-(1.46095))**2+(r3-(-1.93160))**2+(r4-(-0.09503))**2+(r5-(-0.06574))**2)/0.422500)**2",
+      "variables": [
+        {
+          "name": "r0",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_L",
+          "transform_type": "ROT_X",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r1",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_L",
+          "transform_type": "ROT_Y",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r2",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_L",
+          "transform_type": "ROT_Z",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r3",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_L",
+          "transform_type": "ROT_X",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r4",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_L",
+          "transform_type": "ROT_Y",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r5",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_L",
+          "transform_type": "ROT_Z",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        }
+      ]
+    },
+    {
+      "data_path": "key_blocks[\"CORR_TwistForearmPositive_R\"].value",
+      "expression": "max(0,1-((r0-(-0.60131))**2+(r1-(0.51247))**2+(r2-(-0.98785))**2+(r3-(-1.89749))**2+(r4-(-0.18241))**2+(r5-(-0.67217))**2)/0.422500)**2",
+      "variables": [
+        {
+          "name": "r0",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_R",
+          "transform_type": "ROT_X",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r1",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_R",
+          "transform_type": "ROT_Y",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r2",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_R",
+          "transform_type": "ROT_Z",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r3",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_R",
+          "transform_type": "ROT_X",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r4",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_R",
+          "transform_type": "ROT_Y",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r5",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_R",
+          "transform_type": "ROT_Z",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        }
+      ]
+    },
+    {
+      "data_path": "key_blocks[\"CORR_TwistForearmNegative_R\"].value",
+      "expression": "max(0,1-((r0-(-0.60131))**2+(r1-(0.51247))**2+(r2-(-0.98785))**2+(r3-(-1.76315))**2+(r4-(0.32108))**2+(r5-(0.83724))**2)/0.422500)**2",
+      "variables": [
+        {
+          "name": "r0",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_R",
+          "transform_type": "ROT_X",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r1",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_R",
+          "transform_type": "ROT_Y",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r2",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_R",
+          "transform_type": "ROT_Z",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r3",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_R",
+          "transform_type": "ROT_X",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r4",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_R",
+          "transform_type": "ROT_Y",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r5",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_R",
+          "transform_type": "ROT_Z",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        }
+      ]
+    },
+    {
+      "data_path": "key_blocks[\"CORR_TwistUpper_R\"].value",
+      "expression": "max(0,1-((r0-(-0.91772))**2+(r1-(0.90104))**2+(r2-(-1.46095))**2+(r3-(-1.93160))**2+(r4-(0.09503))**2+(r5-(0.06574))**2)/0.422500)**2",
+      "variables": [
+        {
+          "name": "r0",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_R",
+          "transform_type": "ROT_X",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r1",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_R",
+          "transform_type": "ROT_Y",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r2",
+          "type": "TRANSFORMS",
+          "bone": "UpperArm_R",
+          "transform_type": "ROT_Z",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r3",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_R",
+          "transform_type": "ROT_X",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r4",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_R",
+          "transform_type": "ROT_Y",
+          "transform_space": "LOCAL_SPACE",
+          "rotation_mode": "XYZ",
+          "data_path": ""
+        },
+        {
+          "name": "r5",
+          "type": "TRANSFORMS",
+          "bone": "LowerArm_R",
           "transform_type": "ROT_Z",
           "transform_space": "LOCAL_SPACE",
           "rotation_mode": "XYZ",
@@ -3327,5 +3687,7 @@
   "wrist_fix": "Ordinary skin weights and bind geometry; no wrist corrective driver needed.",
   "front_raise_fix": "Two local pose-correctives; require runtime control like the other 23 morph targets.",
   "normal_bake": "14 elbow NORMAL morph targets updated in final VRM. Apply corresponding positional correction weights.",
-  "note": "Anime material variant. Original 25 correction shapes and 14 baked elbow NORMAL targets retained. Not automatic runtime control."
+  "automatic_runtime_control": false,
+  "prior_25_control_core_compatible": false,
+  "note": "31 morph data shapes. The old 25-shape C# core is not compatible with this revision. Warudo adapter not connected. Expressions remain exclusive whole-face switches."
 }
