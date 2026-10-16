@@ -12,6 +12,7 @@ import * as styles from "./vrm-preview.module.css"
 const MODEL_OPTIONS = [
   { fileName: "faia_alpha.vrm", path: "/vrm/faia_alpha.vrm" },
   { fileName: "faia_beta.vrm", path: "/vrm/faia_beta.vrm" },
+  { fileName: "faia_black.vrm", path: "/vrm/faia_black.vrm" },
 ]
 
 const VrmPreviewPage = () => {

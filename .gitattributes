@@ -1,0 +1,2 @@
+static/vrm/faia_black.vrm filter=lfs diff=lfs merge=lfs -text
+static/vrm/Playground/faia_trans.png filter=lfs diff=lfs merge=lfs -text
